@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analyst Merch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo">ANALYST</a>
+
+      <nav class="main-nav" role="navigation" aria-label="Головне меню">
+        <ul class="nav-list">
+          <li class="nav-item nav-with-dropdown">
+            <a href="catalog.html" class="nav-link">Каталог</a>
+            <ul class="dropdown" aria-label="Підменю каталогу">
+              <li><a href="t-shirts.html" class="dropdown-link">Футболки</a></li>
+              <li><a href="#" class="dropdown-link">Худі/Світшоти</a></li>
+              <li><a href="#" class="dropdown-link">Шопери</a></li>
+              <li><a href="#" class="dropdown-link">Блокноти</a></li>
+              <li><a href="#" class="dropdown-link">Ручки</a></li>
+              <li><a href="#" class="dropdown-link">Стикери</a></li>
+              <li><a href="#" class="dropdown-link">Карти</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a href="discounts.html" class="nav-link">Знижки</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">Про нас</a></li>
+        </ul>
+      </nav>
+
+      <form class="search-form" action="/search" method="get" role="search" aria-label="Пошук по сайту">
+        <label for="site-search" class="visually-hidden">Пошук</label>
+        <input id="site-search" name="q" type="search" placeholder="Сьогодні я шукаю..." />
+      </form>
+
+      <div class="header-actions" role="group" aria-label="Дії">
+        <a class="action-link" href="cart.html" aria-label="Кошик">
+          <img src="images\Shopping cart.svg" alt="Іконка кошика">
+        </a>
+        <a class="action-link" href="profile.html" aria-label="Профіль">
+          <img src="images\profile.svg" alt="Іконка профілю">
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <h1>Дані користувача</h1>
+
+    <form action="#" method="post">
+        
+        <fieldset>
+            <div>
+                <label for="email">Адреса електронної пошти (Ваш логін)</label>
+                <input type="email" id="email" name="email" value="user.email@gmail.com" readonly>
+            </div>
+
+            <div class="form-row">
+                <div>
+                    <label for="first_name">Ім'я</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                </div>
+                <div>
+                    <label for="last_name">Прізвище</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div>
+                    <label for="birth_date">Дата народження</label>
+                    <input type="date" id="birth_date" name="birth_date">
+                </div>
+                <div>
+                    <label for="gender">Стать</label>
+                    <select id="gender" name="gender">
+                        <option value="" disabled selected>Оберіть стать</option> <option value="female">Пані</option>
+                        <option value="male">Пан</option>
+                        <option value="other">Не вказувати</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label for="phone">Телефон</label>
+                <div class="phone-input">
+                    <input type="text" value="+380" readonly>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        pattern="[0-9]{9}" 
+                        title="Введіть 9 цифр вашого номера" 
+                        required>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <h2>Пароль</h2>
+            <div>
+                <label for="current_password">Поточний пароль</label>
+                <input type="password" id="current_password" name="current_password" required minlength="8">
+            </div>
+            <div>
+                <label for="new_password">Новий пароль</label>
+                <input type="password" id="new_password" name="new_password" minlength="8">
+            </div>
+            <div>
+                <label for="confirm_new_password">Підтвердьте новий пароль</label>
+                <input type="password" id="confirm_new_password" name="confirm_new_password" minlength="8">
+            </div>
+        </fieldset>
+        
+        <button type="submit">Зберегти зміни</button>
+    </form>
+</main>
+
+    <!-- CTA SECTION -->
+    <section class="cta-order" aria-label="Замовлення">
+        <div class="container">
+          <h2 class="cta-title">ДЛЯ ЗАМОВЛЕННЯ ПИШІТЬ У БОТ</h2>
+          <p class="cta-action">
+            <a class="button cta-button" href="https://t.me/iasamerch_bot" target="_blank" rel="noopener">@iasamerch_bot</a>
+          </p>
+        </div>
+      </section>
+  
+    </main>
+  
+    <!-- FOOTER -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">ANALYST</a>
+          <p class="footer-tagline">Синці під очима — не єдина візитівка ІПСАшників</p>
+          <div class="social-links">
+            <a href="https://t.me/analyst_shop" target="_blank" rel="noopener" aria-label="Telegram"><img src="images\telegram.svg" alt="Telegram"></a>
+            <a href="https://www.instagram.com/analyst.shop" target="_blank" rel="noopener" aria-label="Instagram"><img src="images\instagram.svg" alt="Instagram"></a>
+          </div>
+        </div>
+  
+        <div class="footer-links">
+          <div class="link-column">
+            <h4>КОНТАКТИ</h4>
+            <ul>
+              <li><a href="about.html">Про нас</a></li>
+            </ul>
+          </div>
+  
+          <div class="link-column">
+            <h4>ДОПОМОГА</h4>
+            <ul>
+              <li><a href="https://t.me/iasamerch_bot" target="_blank" rel="noopener">Бот</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2025 Бєляєва Софія, Плюсніна Валерія, КА-33</p>
+      </div>
+    </footer>
+  
+  </body>
+  </html>
