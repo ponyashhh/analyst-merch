@@ -1,36 +1,183 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analyst Merch</title> </head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analyst Merch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <header>
-        <h1>Analyst Merch Shop</h1>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Головна</a></li>
-            <li>
-                <a href="#">Каталог</a>
-                <ul>
-                    <li><a href="t-shirts.html">Футболки</a></li>
-                    <li><a href="hoodies.html">Худі</a></li>
-                    <li><a href="accessories.html">Аксесуари</a></li>
-                </ul>
-            </li>
-            <li><a href="discounts.html">Знижки</a></li>
-            <li><a href="about.html">Про нас</a></li>
-            <li><a href="contacts.html">Контакти</a></li>
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo">ANALYST</a>
+
+      <nav class="main-nav" role="navigation" aria-label="Головне меню">
+        <ul class="nav-list">
+          <li class="nav-item nav-with-dropdown">
+            <a href="#" class="nav-link">Каталог</a>
+            <ul class="dropdown" aria-label="Підменю каталогу">
+              <li><a href="t-shirts.html" class="dropdown-link">Футболки</a></li>
+              <li><a href="#" class="dropdown-link">Худі/Світшоти</a></li>
+              <li><a href="shoppers.html" class="dropdown-link">Шопери</a></li>
+              <li><a href="notebooks.html" class="dropdown-link">Блокноти</a></li>
+              <li><a href="pens.html" class="dropdown-link">Ручки</a></li>
+              <li><a href="stickers.html" class="dropdown-link">Стикери</a></li>
+              <li><a href="#" class="dropdown-link">Карти</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a href="discounts.html" class="nav-link">Знижки</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">Про нас</a></li>
         </ul>
-    </nav>
+      </nav>
 
-    <main>
-        </main>
+      <form class="search-form" action="/search" method="get" role="search" aria-label="Пошук по сайту">
+        <label for="site-search" class="visually-hidden">Пошук</label>
+        <input id="site-search" name="q" type="search" placeholder="Сьогодні я шукаю..." />
+      </form>
 
-    <footer>
-        <p>&copy; 2025 Бєляєва Софія, Плюсніна Валерія, КА-33</p>
-    </footer>
+      <div class="header-actions" role="group" aria-label="Дії">
+        <a class="action-link" href="cart.html" aria-label="Кошик">
+          <img src="images\Shopping cart.svg" alt="Іконка кошика">
+        </a>
+        <a class="action-link" href="registeration.html" aria-label="Профіль">
+          <img src="images\profile.svg" alt="Іконка профілю">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" role="main">
+    <div class="container">
+        <nav aria-label="Хлібні крихти" class="breadcrumbs">
+            <a href="index.html">Головна</a> › <span>Знижкии</span>
+        </nav>
+        
+        <h1>Знижки</h1>
+
+        <div class="product-grid" role="list">
+        <!--Футболка Analyze and conquer-->
+          <article class="product-card" role="listitem" aria-label="Analyze and conquer">
+              <div class="product-media">
+                  <img src="images\t-shirt-analyze.png" alt="Футболка Analyze and conquer">
+              </div>
+              <div class="product-body">
+                  <h3 class="product-title">Analyze and conquer</h3>
+                  <div class="product-rating">★★★★★ <span class="rating-value">5.0/5</span></div>
+                  <div class="product-price">
+                    <span class="price-current">$495</span>
+                    <span class="price-old" aria-hidden="true">$550</span>
+                    <span class="price-discount" aria-hidden="true">-10%</span>
+                  </div>
+              </div>
+          </article>
+        <!--Футболка Lo-fi girl-->
+          <article class="product-card" role="listitem" aria-label="Lo-fi girl">
+              <div class="product-media">
+                  <img src="images\t-shirt-lofi.png" alt="Футболка Lo-fi girl">
+              </div>
+              <div class="product-body">
+                  <h3 class="product-title">Lo-fi girl</h3>
+                  <div class="product-rating">★★★★☆ <span class="rating-value">4.0/5</span></div>
+                  <div class="product-price">
+                    <span class="price-current">$495</span>
+                    <span class="price-old" aria-hidden="true">$550</span>
+                    <span class="price-discount" aria-hidden="true">-10%</span>
+                  </div>
+              </div>
+          </article>
+        <!--Блокнот Старе лого-->
+          <article class="product-card" role="listitem" aria-label="Old Logo Black">
+            <div class="product-media">
+                <img src="images\notebook-old2.png" alt="Old Logo Black">
+            </div>
+            <div class="product-body">
+                <h3 class="product-title">Old Logo Black</h3>
+                <div class="product-rating">★★★☆☆ <span class="rating-value">3.0/5</span></div>
+                <div class="product-price">
+                    <span class="price-current">$162</span>
+                    <span class="price-old" aria-hidden="true">$180</span>
+                    <span class="price-discount" aria-hidden="true">-10%</span>
+                  </div>
+            </div>
+          </article>
+        <!--Блокнот Лінійка-->
+          <article class="product-card" role="listitem" aria-label="Лінійка (блокнот)">
+            <div class="product-media">
+                <img src="images\notebooks-lin.png" alt="Блокнот Лінійка">
+            </div>
+            <div class="product-body">
+                <h3 class="product-title">Лінійка</h3>
+                <div class="product-rating">★★★★★ <span class="rating-value">5.0/5</span></div>
+                <div class="product-price">
+                    <span class="price-current">$162</span>
+                    <span class="price-old" aria-hidden="true">$180</span>
+                    <span class="price-discount" aria-hidden="true">-10%</span>
+                  </div>
+            </div>
+          </article>
+        <!--Ручка компілюю-->
+          <article class="product-card" role="listitem" aria-label="Ручка компілюю">
+            <div class="product-media">
+                <img src="images\pens-compil.png" alt="Ручка компілюю">
+            </div>
+            <div class="product-body">
+                <h3 class="product-title">Компілюю</h3>
+                <div class="product-rating">★★★★☆ <span class="rating-value">4.0/5</span></div>
+                <div class="product-price">
+                    <span class="price-current">$22,5</span>
+                    <span class="price-old" aria-hidden="true">$25</span>
+                    <span class="price-discount" aria-hidden="true">-10%</span>
+                  </div>
+            </div>
+          </article>
+        <!--Ручка лапки-->
+          <article class="product-card" role="listitem" aria-label="Лвпки (ручка)">
+            <div class="product-media">
+                <img src="images\pens-paws.png" alt="Ручка Лапки">
+            </div>
+            <div class="product-body">
+                <h3 class="product-title">Лапки</h3>
+                <div class="product-rating">★★★☆☆ <span class="rating-value">3.0/5</span></div>
+                <div class="product-price">
+                    <span class="price-current">$22,5</span>
+                    <span class="price-old" aria-hidden="true">$25</span>
+                    <span class="price-discount" aria-hidden="true">-10%</span>
+                  </div>
+            </div>
+          </article>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">ANALYST</a>
+        <p class="footer-tagline">Синці під очима — не єдина візитівка ІПСАшників</p>
+        <div class="social-links">
+          <a href="https://t.me/analyst_shop" target="_blank" rel="noopener" aria-label="Telegram"><img src="images\telegram.svg" alt="Telegram"></a>
+          <a href="https://www.instagram.com/analyst.shop" target="_blank" rel="noopener" aria-label="Instagram"><img src="images\instagram.svg" alt="Instagram"></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="link-column">
+          <h4>КОНТАКТИ</h4>
+          <ul>
+            <li><a href="about.html">Про нас</a></li>
+          </ul>
+        </div>
+        <div class="link-column">
+          <h4>ДОПОМОГА</h4>
+          <ul>
+            <li><a href="https://t.me/iasamerch_bot" target="_blank" rel="noopener">Бот</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="copyright">&copy; 2025 Бєляєва Софія, Плюсніна Валерія, КА-33</p>
+    </div>
+  </footer>
+
 </body>
 </html>
