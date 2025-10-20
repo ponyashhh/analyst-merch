@@ -15,7 +15,10 @@
 * `/images` — папка для всіх зображень та графіки.
 * `/js` — папка для JavaScript файлів.
 * `index.html` — головна сторінка сайту.
-* `catalog.html` — сторінка каталогу товарів.
 * `discounts.html` — сторінка з акційними пропозиціями.
 * `about.html` — сторінка з інформацією про проєкт та команду.
-* `contacts.html` — сторінка з контактною інформацією та формою зворотного зв'язку.
+* `cart.html` — сторінка кошика.
+* `t-shirts.html, shoppers.html, notebooks.html, pens.html, stickers.html` — сторінки категорій каталогу.
+* `product-detail.html` — сторінка товару.
+* `registration.html` — сторінка реєстрації та входу.
+* `profile.html` — сторінка профілю користувача.
