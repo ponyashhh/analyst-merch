@@ -1,0 +1,301 @@
+/* === components.css - Компоненти (кнопки, картки, форми) === */
+
+/* Логотип */
+.logo {
+  font-family: var(--font-primary);
+  font-size: 32px;
+  color: var(--color-primary-yellow);
+  letter-spacing: 1.5px;
+}
+
+/* Навігаційні посилання */
+.main-nav .nav-link {
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.main-nav .nav-link:hover {
+  color: var(--color-primary-yellow);
+}
+
+/* Форма пошуку */
+.search-form input {   
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 20px;
+  padding: 8px 16px;
+  color: var(--color-light);
+  min-width: 250px;
+  transition: all 0.3s ease;
+}
+
+.search-form input::placeholder {
+  color: #aaa;
+}
+
+/* Валідація та фокус (вимога лабораторної) */
+.search-form input:focus {
+  outline: none;
+  border-color: var(--color-primary-yellow);
+  box-shadow: 0 0 5px rgba(255, 210, 0, 0.5);
+}
+
+/* Іконки в шапці */
+.header-actions .action-link img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.header-actions .action-link:hover img {
+  transform: scale(1.1);
+}
+
+/* Текстові елементи Hero */
+.hero-title {
+  font-family: var(--font-primary);
+  font-size: 80px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: 2px;
+}
+
+.hero-title span {
+  background-color: var(--color-primary-yellow);
+  color: var(--color-dark);
+  padding: 0 12px;
+}
+
+.hero-sub {
+  font-size: 16px;
+  max-width: 550px;
+  margin-bottom: 32px;
+  color: #555;
+}
+
+.hero-stats strong {
+  font-family: var(--font-primary);
+  font-size: 48px;
+  color: var(--color-dark);
+  display: block;
+  line-height: 1;
+}
+
+/* Кнопки */
+.button {
+  display: inline-block;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-cta .button:hover {
+  background-color: #333;
+  transform: translateY(-3px);
+}
+
+.cta-button {
+  background-color: var(--color-primary-yellow);
+  color: var(--color-dark);
+  font-weight: bold;
+  padding: 14px 28px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  background-color: #ffde59;
+}
+
+.cta-title {
+  font-family: var(--font-primary);
+  color: var(--color-light); /* Білий колір! */
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+/* Заголовки секцій */
+.section-title {
+  font-family: var(--font-primary);
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1.5px;
+}
+
+/* Картка товару */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.product-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-media {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 300px; 
+}
+
+.product-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.product-card:hover .product-media {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--color-dark);
+}
+
+.product-rating {
+  color: var(--color-primary-yellow);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.rating-value {
+  color: #777;
+  margin-left: 8px;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.price-old {
+  font-size: 16px;
+  color: #999;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+.price-discount {
+  font-size: 14px;
+  color: var(--color-accent-red);
+  background-color: #ffebeb;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+/* Картка категорії (Format) */
+.format-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  display: block;
+}
+
+.format-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.format-card:hover::before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.format-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.format-card:hover img {
+  transform: scale(1.05);
+}
+
+.format-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-family: var(--font-primary);
+  font-size: 40px;
+  color: var(--color-light);
+  text-align: center;
+  width: 100%;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Елементи футера */
+.social-links img {
+  width: 24px;
+  transition: opacity 0.3s ease;
+}
+
+.social-links a:hover img {
+  opacity: 0.7;
+}
+
+.link-column h4 {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  color: var(--color-dark);
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.link-column a:hover {
+  color: var(--color-dark);
+}
+
+/* Елементи мобільного меню (іконки бургеру) */
+.burger-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-light);
+  margin: 5px 0;
+}
+
+.submenu-arrow {
+  display: block;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.submenu-arrow::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--color-light);
+  border-bottom: 2px solid var(--color-light);
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}

@@ -1,0 +1,44 @@
+/* --- КРОК 1: БАЗОВІ СТИЛІ --- */
+
+/* 1.1: Підключення шрифтів з Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap');
+
+/* 1.2: Визначення кольорів та глобальних змінних */
+:root {
+  --color-dark: #000000;
+  --color-light: #ffffff;
+  --color-primary-yellow: #FFD200;
+  --color-accent-red: #FF3333;
+  --font-primary: 'Bebas Neue', sans-serif;
+  --font-secondary: 'Inter', sans-serif;
+}
+
+/* 1.3: Глобальний скидання стилів та налаштування */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Робить розрахунок розмірів блоків інтуїтивнішим */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-secondary); /* Основний шрифт для тексту */
+  background-color: var(--color-light); /* Білий фон для сайту */
+  color: var(--color-dark); /* Чорний колір для тексту */
+  line-height: 1.6; /* Міжрядковий інтервал для кращої читабельності */
+}
+
+a {
+  text-decoration: none; /* Прибираємо підкреслення у всіх посиланнях */
+  color: inherit; /* Посилання успадковують колір від батьківського елемента */
+}
+
+ul {
+  list-style: none; /* Прибираємо маркери у списках */
+}
+
+img {
+  max-width: 100%; /* Зображення не будуть виходити за межі свого контейнера */
+  display: block;
+}

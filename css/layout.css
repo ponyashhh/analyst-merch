@@ -1,0 +1,451 @@
+/* === layout.css - Структура сторінки та адаптивність === */
+
+/* Універсальний контейнер */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header Layout */
+.site-header {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: 16px 0;
+  position: relative;
+}
+
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav .nav-list {
+  display: flex;
+  gap: 32px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Спадне меню (Desktop) */
+.nav-with-dropdown {
+  position: relative;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--color-dark);
+  border-radius: 8px;
+  padding: 10px 0;
+  min-width: 200px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.nav-with-dropdown:hover .dropdown {
+  display: block;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 8px 20px;
+  color: var(--color-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-link:hover {
+  background-color: var(--color-primary-yellow);
+  color: var(--color-dark);
+}
+
+/* Hero Layout */
+.hero {
+  padding: 0;
+}
+
+.hero-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  padding-bottom: 60px;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-stats {
+  margin-top: 40px;
+}
+
+/* Partner Strip Layout */
+.partner-strip {
+  background-color: var(--color-dark);
+  padding: 25px 0;
+}
+
+.partner-strip img {
+  height: 100px;
+  width: auto;
+}
+
+/* Popular Products Layout */
+.popular-products {
+  padding: 80px 0;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* Formats Layout */
+.formats {
+  padding: 80px 0;
+}
+
+.formats .container {
+  background-color: #dad7d7;
+  border-radius: 30px;
+  padding: 70px;
+}
+
+.format-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.format-card:nth-child(1) { grid-column: span 2; }
+.format-card:nth-child(2) { grid-column: span 3; }
+.format-card:nth-child(3) { grid-column: span 3; }
+.format-card:nth-child(4) { grid-column: span 2; }
+
+/* CTA Layout */
+.cta-order {
+  margin-bottom: -60px;
+  position: relative;
+  z-index: 5;
+}
+
+.cta-order .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: var(--color-dark);
+  border-radius: 30px;
+  padding: 40px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Footer Layout */
+.site-footer {
+  background-color: #ecebeb;
+  color: #555;
+  padding-top: 150px;
+  padding-bottom: 40px;
+}
+
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-brand {
+  flex: 1;
+  max-width: 300px;
+}
+
+.footer-brand .logo {
+  font-family: var(--font-primary);
+  font-size: 28px;
+  color: var(--color-dark); /* Робимо логотип чорним */
+}
+
+.footer-tagline {
+  margin: 24px 0; /* ЗБІЛЬШУЄМО відступ (було 16px) */
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+}
+
+.link-column ul li {
+  margin-bottom: 10px;
+}
+
+.link-column a {
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 30px 24px 0;
+  border-top: 1px solid #cbcbcb;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+}
+
+/* Приховування елементів бургер-меню на десктопі */
+.burger-toggle,
+.burger-menu,
+.submenu-toggle,
+.submenu-arrow {
+  display: none;
+}
+
+
+/* ======================================= */
+/* ======= АДАПТАЦІЯ (MEDIA QUERIES) ===== */
+/* ======================================= */
+
+/* --- ПЛАНШЕТИ (до 1300px) --- */
+@media (max-width: 1300px) {
+  .hero-title { font-size: 55px; }
+  .section-title { font-size: 32px; margin-bottom: 25px; }
+
+  .container, .header-inner {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .hero { padding-top: 40px; }
+  .hero-inner { padding: 0 50px; }
+
+  /* Товари: 2 колонки */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+  }
+  .product-media { max-width: 285px; }
+
+  /* Категорії: 2 колонки */
+  .format-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .format-card:nth-child(1),
+  .format-card:nth-child(2),
+  .format-card:nth-child(3),
+  .format-card:nth-child(4) {
+    grid-column: span 1;
+  }
+  .format-card { height: 220px; }
+
+  .formats { padding-left: 50px; padding-right: 50px; }
+  .formats .container { padding: 50px; padding-top: 20px; }
+
+  .cta-title { font-size: 24px; }
+  .cta-order { margin-bottom: -45px; }
+  .cta-order .container {
+    padding: 30px 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .site-footer { padding-top: 100px; }
+  .footer-inner { padding-left: 50px; padding-right: 50px; }
+}
+
+/* --- БУРГЕР-МЕНЮ ТА СТРУКТУРА (до 920px) --- */
+@media (max-width: 920px) {
+  /* Ховаємо десктопну навігацію */
+  .main-nav, .search-form { display: none; }
+
+  /* Сітка шапки */
+  .header-inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+  }
+  .logo { grid-column: 1; }
+  .header-actions {
+    grid-column: 2;
+    justify-self: center;
+  }
+  
+  /* Показуємо кнопку бургера */
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+    z-index: 1001;
+    grid-column: 3;
+    justify-self: end;
+  }
+
+  /* Мобільне меню (виїзд справа) */
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: var(--color-dark);
+    display: block;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1001;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+  }
+
+  .main-nav .nav-list {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 60px;
+  }
+
+  .main-nav .nav-link {
+    font-size: 18px;
+    display: block;
+    padding: 15px 30px;
+    border-bottom: 1px solid #333;
+  }
+  .main-nav .nav-link:hover { background-color: #222; }
+
+  /* Логіка відкриття */
+  .burger-toggle:checked ~ .main-nav { transform: translateX(0); }
+
+  /* Overlay */
+  .menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  .burger-toggle:checked ~ .menu-overlay { display: block; }
+
+  .submenu-arrow {
+    display: block; /* <--- ВАЖЛИВО! Перекриваємо display: none, який був для десктопу */
+    padding: 20px;  /* Зона кліку */
+    cursor: pointer;
+  }
+
+  /* Підменю "Каталог" (Акордеон) */
+  .submenu-toggle { display: none; }
+  
+  .nav-link-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #333;
+  }
+  
+  .nav-link-wrapper .nav-link {
+    border-bottom: none;
+    pointer-events: none;
+  }
+
+  /* Стрілка та логіка підменю */
+  .main-nav .dropdown {
+    display: block;
+    position: static;
+    background-color: #222;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+  }
+
+  .main-nav .dropdown-link {
+    font-size: 16px;
+    padding: 10px 15px 10px 45px;
+    border: none;
+  }
+
+  .submenu-toggle:checked ~ .dropdown { max-height: 500px; }
+  .submenu-toggle:checked ~ .nav-link-wrapper .submenu-arrow::before { transform: rotate(-135deg); }
+}
+
+/* --- ТЕЛЕФОНИ (до 800px) --- */
+@media (max-width: 800px) {
+  .header-inner { padding: 0 16px; }
+
+  /* Hero вертикально */
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+    align-items: center;
+  }
+  .hero-text {
+    margin-bottom: 40px;
+    padding-bottom: 0;
+  }
+  .hero-title { font-size: 48px; }
+  .hero-sub { max-width: 100%; }
+
+  /* Категорії в 1 колонку */
+  .format-grid { grid-template-columns: 1fr; }
+  .formats .container { padding: 30px 20px; }
+  .format-title { font-size: 30px; }
+
+  /* CTA вертикально */
+  .cta-order .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .cta-title { font-size: 22px; }
+  .cta-order { margin-bottom: -50px; }
+
+  .site-footer { padding-top: 100px; }
+  .footer-inner { flex-direction: column; text-align: center; }
+  .footer-brand { max-width: 100%; }
+  .social-links { justify-content: center; }
+  .footer-links { flex-direction: column; gap: 30px; }
+}
+
+/* --- МАЛІ ЕКРАНИ (до 700px) --- */
+@media (max-width: 700px) {
+  .product-grid { grid-template-columns: 1fr; }
+  .popular-products { padding-top: 60px; padding-bottom: 60px; }
+}
