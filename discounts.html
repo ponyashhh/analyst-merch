@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Analyst Merch — Знижки</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
@@ -13,10 +13,19 @@
     <div class="header-inner">
       <a href="index.html" class="logo">ANALYST</a>
 
+      <input type="checkbox" id="burger-toggle" class="burger-toggle">
+
       <nav class="main-nav" aria-label="Головне меню">
         <ul class="nav-list">
           <li class="nav-item nav-with-dropdown">
-            <a href="#" class="nav-link">Каталог</a>
+
+            <input type="checkbox" id="submenu-toggle" class="submenu-toggle">
+
+            <div class="nav-link-wrapper">
+              <a href="#" class="nav-link">Каталог</a>
+              <label for="submenu-toggle" class="submenu-arrow"></label>
+            </div>
+            
             <ul class="dropdown" aria-label="Підменю каталогу">
               <li><a href="t-shirts.html" class="dropdown-link">Футболки</a></li>
               <li><a href="shoppers.html" class="dropdown-link">Шопери</a></li>
@@ -31,6 +40,8 @@
         </ul>
       </nav>
 
+      <label for="burger-toggle" class="menu-overlay"></label>
+
       <form class="search-form" action="/search" method="get" role="search" aria-label="Пошук по сайту">
         <label for="site-search" class="visually-hidden">Пошук</label>
         <input id="site-search" name="q" type="search" placeholder="Сьогодні я шукаю..." />
@@ -44,6 +55,13 @@
           <img src="images/profile.svg" alt="Профіль">
         </a>
       </div>
+
+      <label for="burger-toggle" class="burger-menu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </label>
+
     </div>
   </header>
 
@@ -53,10 +71,11 @@
             <a href="index.html">Головна</a> › <span>Знижки</span>
         </nav>
         
-        <h1>Знижки</h1>
+        <h1 class="page-title">ЗНИЖКИ</h1>
 
-        <div class="product-grid" role="list">
-        <!--Футболка Analyze and conquer-->
+        <div style="margin-bottom: 80px;">
+          <div class="product-grid" role="list">
+          <!--Футболка Analyze and conquer-->
           <article class="product-card"  aria-label="Analyze and conquer">
               <div class="product-media">
                   <img src="images/t-shirt-analyze.png" alt="Футболка Analyze and conquer">
@@ -71,7 +90,7 @@
                   </div>
               </div>
           </article>
-        <!--Футболка Lo-fi girl-->
+          <!--Футболка Lo-fi girl-->
           <article class="product-card"  aria-label="Lo-fi girl">
               <div class="product-media">
                   <img src="images/t-shirt-lofi.png" alt="Футболка Lo-fi girl">
@@ -86,7 +105,7 @@
                   </div>
               </div>
           </article>
-        <!--Блокнот Старе лого-->
+          <!--Блокнот Старе лого-->
           <article class="product-card"  aria-label="Old Logo Black">
             <div class="product-media">
                 <img src="images/notebook-old2.png" alt="Old Logo Black">
@@ -101,7 +120,7 @@
                   </div>
             </div>
           </article>
-        <!--Блокнот Лінійка-->
+          <!--Блокнот Лінійка-->
           <article class="product-card"  aria-label="Лінійка (блокнот)">
             <div class="product-media">
                 <img src="images/notebooks-lin.png" alt="Блокнот Лінійка">
@@ -116,7 +135,7 @@
                   </div>
             </div>
           </article>
-        <!--Ручка компілюю-->
+          <!--Ручка компілюю-->
           <article class="product-card"  aria-label="Ручка Супергерой">
             <div class="product-media">
                 <img src="images/pens-hero.png" alt="Ручка Супергерой">
@@ -131,7 +150,7 @@
                   </div>
             </div>
           </article>
-        <!--Ручка лапки-->
+          <!--Ручка лапки-->
           <article class="product-card"  aria-label="Лапки (ручка)">
             <div class="product-media">
                 <img src="images/pens-paws.png" alt="Ручка Лапки">
@@ -146,7 +165,8 @@
                   </div>
             </div>
           </article>
-        </div> 
+          </div> 
+        </div>
     </div> 
   </main>  
            

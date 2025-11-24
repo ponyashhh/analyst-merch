@@ -4,19 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Analyst Merch — Стикери</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo">ANALYST</a>
 
+      <input type="checkbox" id="burger-toggle" class="burger-toggle">
+
       <nav class="main-nav" aria-label="Головне меню">
         <ul class="nav-list">
           <li class="nav-item nav-with-dropdown">
-            <a href="#" class="nav-link">Каталог</a>
+            <input type="checkbox" id="submenu-toggle" class="submenu-toggle">
+
+            <div class="nav-link-wrapper">
+              <a href="#" class="nav-link">Каталог</a>
+              <label for="submenu-toggle" class="submenu-arrow"></label>
+            </div>
+            
             <ul class="dropdown" aria-label="Підменю каталогу">
               <li><a href="t-shirts.html" class="dropdown-link">Футболки</a></li>
               <li><a href="shoppers.html" class="dropdown-link">Шопери</a></li>
@@ -31,9 +38,11 @@
         </ul>
       </nav>
 
+      <label for="burger-toggle" class="menu-overlay"></label>
+
       <form class="search-form" action="/search" method="get" role="search" aria-label="Пошук по сайту">
         <label for="site-search" class="visually-hidden">Пошук</label>
-        <input id="site-search" name="q" type="search" placeholder="Сьогодні я шукаю..." />
+        <input id="site-search" name="q" type="search" placeholder="Сьогодні я шукаю..." required />
       </form>
 
       <div class="header-actions" role="group" aria-label="Дії">
@@ -44,6 +53,12 @@
           <img src="images/profile.svg" alt="Профіль">
         </a>
       </div>
+
+      <label for="burger-toggle" class="burger-menu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </label>
     </div>
   </header>
 
@@ -53,89 +68,90 @@
             <a href="index.html">Головна</a> › <span>Стикери</span>
         </nav>
         
-        <h1>Стикери</h1>
+        <h1 class="page-title">СТИКЕРИ</h1>
 
-        <div class="product-grid" role="list">
-        <!--Стикер Пуща-->
-          <article class="product-card"  aria-label="Пуща">
-              <div class="product-media">
-                  <img src="images/stickers-puscha.png" alt="Стикер Пуща">
-              </div>
-              <div class="product-body">
-                  <h3 class="product-title">Пуща</h3>
-                  <div class="product-rating">★★★★★ <span class="rating-value">5.0/5</span></div>
-                  <div class="product-price">$10</div>
-              </div>
-          </article>
-        <!--Стикер Компілюю-->
-          <article class="product-card"  aria-label="Компілюю">
-              <div class="product-media">
-                  <img src="images/stickers-compil.png" alt="Стикер Компілюю">
-              </div>
-              <div class="product-body">
-                  <h3 class="product-title">Компілюю</h3>
-                  <div class="product-rating">★★★★☆ <span class="rating-value">4.0/5</span></div>
-                  <div class="product-price">$10</div>
-              </div>
-          </article>
-        <!--Стикер Лапки-->
-          <article class="product-card"  aria-label="Лапки (стикер)">
-            <div class="product-media">
-                <img src="images/stickers-paws.png" alt="Стикер Лапки">
-            </div>
-            <div class="product-body">
-                <h3 class="product-title">Лапки</h3>
-                <div class="product-rating">★★★☆☆ <span class="rating-value">3.0/5</span></div>
-                <div class="product-price">$10</div>
-            </div>
-          </article>
-        <!--Стикер Пара-->
-          <article class="product-card"  aria-label="Пара">
-              <div class="product-media">
-                  <img src="images/stickers-para.png" alt="Стикер Пара">
-              </div>
-              <div class="product-body">
-                  <h3 class="product-title">Пара</h3>
-                  <div class="product-rating">★★★★★ <span class="rating-value">5.0/5</span></div>
-                  <div class="product-price">$10</div>
-              </div>
-          </article>
-        <!--Стикер Since 1997-->
-          <article class="product-card"  aria-label="Since 1997">
-              <div class="product-media">
-                  <img src="images/stickers-1997.png" alt="Стикер Since 1997">
-              </div>
-              <div class="product-body">
-                  <h3 class="product-title">Since 1997</h3>
-                  <div class="product-rating">★★★★★ <span class="rating-value">5.0/5</span></div>
-                  <div class="product-price">$10</div>
-              </div>
-          </article>
-        <!--Стикер Предмети-->
-          <article class="product-card"  aria-label="Предмети">
-              <div class="product-media">
-                  <img src="images/stickers-subjects.png" alt="Стикер Предмети">
-              </div>
-              <div class="product-body">
-                  <h3 class="product-title">Предмети</h3>
-                  <div class="product-rating">★★★★☆ <span class="rating-value">4.0/5</span></div>
-                  <div class="product-price">$10</div>
-              </div>
-          </article>
-        <!--Стикер Виселиця-->
-          <article class="product-card"  aria-label="Виселиця">
-              <div class="product-media">
-                  <img src="images/stickers-viselitsa.png" alt="Стикер Виселиця">
-              </div>
-              <div class="product-body">
-                  <h3 class="product-title">Виселиця</h3>
-                  <div class="product-rating">★★★★★ <span class="rating-value">5.0/5</span></div>
-                  <div class="product-price">$10</div>
-              </div>
-          </article>
+        <div style="margin-bottom: 80px;">
+          <div class="product-grid" role="list">
+            
+            <article class="product-card"  aria-label="Пуща">
+                <div class="product-media">
+                    <img src="images/stickers-puscha.png" alt="Стикер Пуща">
+                </div>
+                <div class="product-body">
+                    <h3 class="product-title">Пуща</h3>
+                    <div class="product-rating">★★★★★ <span class="rating-value">5.0/5</span></div>
+                    <div class="product-price">$10</div>
+                </div>
+            </article>
 
+            <article class="product-card"  aria-label="Компілюю">
+                <div class="product-media">
+                    <img src="images/stickers-compil.png" alt="Стикер Компілюю">
+                </div>
+                <div class="product-body">
+                    <h3 class="product-title">Компілюю</h3>
+                    <div class="product-rating">★★★★☆ <span class="rating-value">4.0/5</span></div>
+                    <div class="product-price">$10</div>
+                </div>
+            </article>
+
+            <article class="product-card"  aria-label="Лапки (стикер)">
+              <div class="product-media">
+                  <img src="images/stickers-paws.png" alt="Стикер Лапки">
+              </div>
+              <div class="product-body">
+                  <h3 class="product-title">Лапки</h3>
+                  <div class="product-rating">★★★☆☆ <span class="rating-value">3.0/5</span></div>
+                  <div class="product-price">$10</div>
+              </div>
+            </article>
+
+            <article class="product-card"  aria-label="Пара">
+                <div class="product-media">
+                    <img src="images/stickers-para.png" alt="Стикер Пара">
+                </div>
+                <div class="product-body">
+                    <h3 class="product-title">Пара</h3>
+                    <div class="product-rating">★★★★★ <span class="rating-value">5.0/5</span></div>
+                    <div class="product-price">$10</div>
+                </div>
+            </article>
+
+            <article class="product-card"  aria-label="Since 1997">
+                <div class="product-media">
+                    <img src="images/stickers-1997.png" alt="Стикер Since 1997">
+                </div>
+                <div class="product-body">
+                    <h3 class="product-title">Since 1997</h3>
+                    <div class="product-rating">★★★★★ <span class="rating-value">5.0/5</span></div>
+                    <div class="product-price">$10</div>
+                </div>
+            </article>
+
+            <article class="product-card"  aria-label="Предмети">
+                <div class="product-media">
+                    <img src="images/stickers-subjects.png" alt="Стикер Предмети">
+                </div>
+                <div class="product-body">
+                    <h3 class="product-title">Предмети</h3>
+                    <div class="product-rating">★★★★☆ <span class="rating-value">4.0/5</span></div>
+                    <div class="product-price">$10</div>
+                </div>
+            </article>
+
+            <article class="product-card"  aria-label="Виселиця">
+                <div class="product-media">
+                    <img src="images/stickers-viselitsa.png" alt="Стикер Виселиця">
+                </div>
+                <div class="product-body">
+                    <h3 class="product-title">Виселиця</h3>
+                    <div class="product-rating">★★★★★ <span class="rating-value">5.0/5</span></div>
+                    <div class="product-price">$10</div>
+                </div>
+            </article>
+
+          </div>
         </div>
-
     </div>
   </main>
 

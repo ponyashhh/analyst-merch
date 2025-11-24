@@ -299,3 +299,49 @@
   transform: rotate(45deg);
   transition: transform 0.3s ease;
 }
+
+/* --- ДОДАТОК: ХЛІБНІ КРИХТИ ТА ЗАГОЛОВКИ СТОРІНОК --- */
+
+/* Навігаційний ланцюжок */
+.breadcrumbs {
+  font-size: 14px;
+  color: #777;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.breadcrumbs a {
+  color: #777;
+  transition: color 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+  color: var(--color-dark); /* Темнішає при наведенні */
+  text-decoration: underline;
+}
+
+.breadcrumbs span {
+  color: var(--color-dark); /* Поточна сторінка темна */
+  font-weight: bold;
+}
+
+/* Заголовок внутрішньої сторінки (h1) */
+.page-title {
+  font-family: var(--font-primary);
+  font-size: 48px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  color: var(--color-dark);
+}
+
+/* Адаптація заголовка для телефонів */
+@media (max-width: 800px) {
+  .page-title {
+    font-size: 36px;
+    text-align: center;
+  }
+  
+  .breadcrumbs {
+    text-align: center;
+  }
+}

@@ -4,33 +4,47 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Analyst Merch — Ручки</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo">ANALYST</a>
+
+      <input type="checkbox" id="burger-toggle" class="burger-toggle">
+
       <nav class="main-nav" aria-label="Головне меню">
         <ul class="nav-list">
           <li class="nav-item nav-with-dropdown">
-            <a href="#" class="nav-link">Каталог</a>
+            <input type="checkbox" id="submenu-toggle" class="submenu-toggle">
+
+            <div class="nav-link-wrapper">
+              <a href="#" class="nav-link">Каталог</a>
+              <label for="submenu-toggle" class="submenu-arrow"></label>
+            </div>
+            
             <ul class="dropdown" aria-label="Підменю каталогу">
               <li><a href="t-shirts.html" class="dropdown-link">Футболки</a></li>
               <li><a href="shoppers.html" class="dropdown-link">Шопери</a></li>
               <li><a href="notebooks.html" class="dropdown-link">Блокноти</a></li>
               <li><a href="pens.html" class="dropdown-link">Ручки</a></li>
               <li><a href="stickers.html" class="dropdown-link">Стикери</a></li>
-              </ul>
+            </ul>
           </li>
+
           <li class="nav-item"><a href="discounts.html" class="nav-link">Знижки</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">Про нас</a></li>
         </ul>
       </nav>
+
+      <label for="burger-toggle" class="menu-overlay"></label>
+
       <form class="search-form" action="/search" method="get" role="search" aria-label="Пошук по сайту">
         <label for="site-search" class="visually-hidden">Пошук</label>
-        <input id="site-search" name="q" type="search" placeholder="Сьогодні я шукаю..." />
+        <input id="site-search" name="q" type="search" placeholder="Сьогодні я шукаю..." required />
       </form>
+
       <div class="header-actions" role="group" aria-label="Дії">
         <a class="action-link" href="cart.html" aria-label="Кошик">
           <img src="images/shopping-cart.svg" alt="Кошик">
@@ -39,6 +53,12 @@
           <img src="images/profile.svg" alt="Профіль">
         </a>
       </div>
+
+      <label for="burger-toggle" class="burger-menu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </label>
     </div>
   </header>
 
@@ -48,34 +68,35 @@
             <a href="index.html">Головна</a> › <span>Ручки</span>
         </nav>
         
-        <h1>Ручки</h1>
+        <h1 class="page-title">РУЧКИ</h1>
 
-        <div class="product-grid" role="list">
-        <!--Ручка Лапки-->
-          <article class="product-card"  aria-label="Лапки">
-              <div class="product-media">
-                  <img src="images/pens-paws.png" alt="Ручка Лапки">
-              </div>
-              <div class="product-body">
-                  <h3 class="product-title">Лапки</h3>
-                  <div class="product-rating">★★★★★ <span class="rating-value">5.0/5</span></div>
-                  <div class="product-price">$25</div>
-              </div>
-          </article>
-        <!--Ручка Супергерой-->
-          <article class="product-card"  aria-label="Супергерой">
-              <div class="product-media">
-                  <img src="images/pens-hero.png" alt="Ручка Супергерой">
-              </div>
-              <div class="product-body">
-                  <h3 class="product-title">Супергерой</h3>
-                  <div class="product-rating">★★★★☆ <span class="rating-value">4.0/5</span></div>
-                  <div class="product-price">$25</div>
-              </div>
-          </article>
+        <div style="margin-bottom: 80px;">
+          <div class="product-grid" role="list">
+            
+            <article class="product-card"  aria-label="Лапки">
+                <div class="product-media">
+                    <img src="images/pens-paws.png" alt="Ручка Лапки">
+                </div>
+                <div class="product-body">
+                    <h3 class="product-title">Лапки</h3>
+                    <div class="product-rating">★★★★★ <span class="rating-value">5.0/5</span></div>
+                    <div class="product-price">$25</div>
+                </div>
+            </article>
 
+            <article class="product-card"  aria-label="Супергерой">
+                <div class="product-media">
+                    <img src="images/pens-hero.png" alt="Ручка Супергерой">
+                </div>
+                <div class="product-body">
+                    <h3 class="product-title">Супергерой</h3>
+                    <div class="product-rating">★★★★☆ <span class="rating-value">4.0/5</span></div>
+                    <div class="product-price">$25</div>
+                </div>
+            </article>
+
+          </div>
         </div>
-
     </div>
   </main>
 

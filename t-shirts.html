@@ -4,33 +4,47 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Analyst Merch — Футболки</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo">ANALYST</a>
+
+      <input type="checkbox" id="burger-toggle" class="burger-toggle">
+
       <nav class="main-nav" aria-label="Головне меню">
         <ul class="nav-list">
           <li class="nav-item nav-with-dropdown">
-            <a href="#" class="nav-link">Каталог</a>
+            <input type="checkbox" id="submenu-toggle" class="submenu-toggle">
+
+            <div class="nav-link-wrapper">
+              <a href="#" class="nav-link">Каталог</a>
+              <label for="submenu-toggle" class="submenu-arrow"></label>
+            </div>
+            
             <ul class="dropdown" aria-label="Підменю каталогу">
               <li><a href="t-shirts.html" class="dropdown-link">Футболки</a></li>
               <li><a href="shoppers.html" class="dropdown-link">Шопери</a></li>
               <li><a href="notebooks.html" class="dropdown-link">Блокноти</a></li>
               <li><a href="pens.html" class="dropdown-link">Ручки</a></li>
               <li><a href="stickers.html" class="dropdown-link">Стикери</a></li>
-              </ul>
+            </ul>
           </li>
+
           <li class="nav-item"><a href="discounts.html" class="nav-link">Знижки</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">Про нас</a></li>
         </ul>
       </nav>
+
+      <label for="burger-toggle" class="menu-overlay"></label>
+
       <form class="search-form" action="/search" method="get" role="search" aria-label="Пошук по сайту">
         <label for="site-search" class="visually-hidden">Пошук</label>
-        <input id="site-search" name="q" type="search" placeholder="Сьогодні я шукаю..." />
+        <input id="site-search" name="q" type="search" placeholder="Сьогодні я шукаю..." required />
       </form>
+
       <div class="header-actions" role="group" aria-label="Дії">
         <a class="action-link" href="cart.html" aria-label="Кошик">
           <img src="images/shopping-cart.svg" alt="Кошик">
@@ -39,6 +53,12 @@
           <img src="images/profile.svg" alt="Профіль">
         </a>
       </div>
+
+      <label for="burger-toggle" class="burger-menu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </label>
     </div>
   </header>
 
@@ -48,104 +68,103 @@
             <a href="index.html">Головна</a> › <span>Футболки</span>
         </nav>
         
-        <h1>Футболки</h1>
+        <h1 class="page-title">ФУТБОЛКИ</h1>
 
-        <div class="product-grid" role="list">
-        <!--Футболка Analyze and conquer-->
-          <article class="product-card"  aria-label="Analyze and conquer">
-            <a href="product-detail.html" class="product-card-link">
+        <div style="margin-bottom: 80px;">
+          <div class="product-grid" role="list">
+            
+            <article class="product-card"  aria-label="Analyze and conquer">
+                <a href="product-detail.html" class="product-card-link" style="display: contents;">
+                  <div class="product-media">
+                    <img src="images/t-shirt-analyze.png" alt="Футболка Analyze and conquer">
+                  </div>
+                  <div class="product-body">
+                    <h3 class="product-title">Analyze and conquer</h3>
+                     <div class="product-rating">★★★★★ <span class="rating-value">5.0/5</span></div>
+                     <div class="product-price">$550</div>
+                  </div>
+                </a>
+            </article>
+
+            <article class="product-card"  aria-label="Lo-fi girl">
+                <div class="product-media">
+                    <img src="images/t-shirt-lofi.png" alt="Футболка Lo-fi girl">
+                </div>
+                <div class="product-body">
+                    <h3 class="product-title">Lo-fi girl</h3>
+                    <div class="product-rating">★★★★☆ <span class="rating-value">4.0/5</span></div>
+                    <div class="product-price">$550</div>
+                </div>
+            </article>
+
+            <article class="product-card"  aria-label="Макароніни (футболка)">
               <div class="product-media">
-                <img src="images/t-shirt-analyze.png" alt="Футболка Analyze and conquer">
+                  <img src="images/hoodie-makaronina.png" alt="Футболка Макароніни">
               </div>
               <div class="product-body">
-                <h3 class="product-title">Analyze and conquer</h3>
+                  <h3 class="product-title">Макароніни</h3>
+                  <div class="product-rating">★★★☆☆ <span class="rating-value">3.0/5</span></div>
+                  <div class="product-price">$550</div>
               </div>
-            </a>
-            <div class="product-body-bottom"> <div class="product-rating">★★★★★ <span class="rating-value">5.0/5</span></div>
-              <div class="product-price">$550</div>
-            </div>
-          </article>
-        <!--Футболка Lo-fi girl-->
-          <article class="product-card"  aria-label="Lo-fi girl">
+            </article>
+
+            <article class="product-card"  aria-label="Лінійка (футболка)">
               <div class="product-media">
-                  <img src="images/t-shirt-lofi.png" alt="Футболка Lo-fi girl">
+                  <img src="images/tshirt-lin.png" alt="Футболка Лінійка">
               </div>
               <div class="product-body">
-                  <h3 class="product-title">Lo-fi girl</h3>
+                  <h3 class="product-title">Лінійка</h3>
+                  <div class="product-rating">★★★★★ <span class="rating-value">5.0/5</span></div>
+                  <div class="product-price">$550</div>
+              </div>
+            </article>
+
+            <article class="product-card"  aria-label="ІПСА розширює свідомість (футболка)">
+              <div class="product-media">
+                  <img src="images/t-shirt-expand.png" alt="Футболка ІПСА розширює свідомість">
+              </div>
+              <div class="product-body">
+                  <h3 class="product-title">ІПСА розширює свідомість</h3>
                   <div class="product-rating">★★★★☆ <span class="rating-value">4.0/5</span></div>
                   <div class="product-price">$550</div>
               </div>
-          </article>
-        <!--Футболка Макароніни-->
-          <article class="product-card"  aria-label="Макароніни (футболка)">
-            <div class="product-media">
-                <img src="images/hoodie-makaronina.png" alt="Футболка Макароніни">
-            </div>
-            <div class="product-body">
-                <h3 class="product-title">Макароніни</h3>
-                <div class="product-rating">★★★☆☆ <span class="rating-value">3.0/5</span></div>
-                <div class="product-price">$550</div>
-            </div>
-          </article>
-        <!--Футболка Лінійка-->
-          <article class="product-card"  aria-label="Лінійка (футболка)">
-            <div class="product-media">
-                <img src="images/tshirt-lin.png" alt="Футболка Лінійка">
-            </div>
-            <div class="product-body">
-                <h3 class="product-title">Лінійка</h3>
-                <div class="product-rating">★★★★★ <span class="rating-value">5.0/5</span></div>
-                <div class="product-price">$550</div>
-            </div>
-          </article>
-        <!--Футболка ІПСА розширює свідомість-->
-          <article class="product-card"  aria-label="ІПСА розширює свідомість (футболка)">
-            <div class="product-media">
-                <img src="images/t-shirt-expand.png" alt="Футболка ІПСА розширює свідомість">
-            </div>
-            <div class="product-body">
-                <h3 class="product-title">ІПСА розширює свідомість</h3>
-                <div class="product-rating">★★★★☆ <span class="rating-value">4.0/5</span></div>
-                <div class="product-price">$550</div>
-            </div>
-          </article>
-        <!--Футболка Суіпсайд-->
-          <article class="product-card"  aria-label="Суіпсайд (футболка)">
-            <div class="product-media">
-                <img src="images/t-shirt-suipsaid.png" alt="Футболка Суіпсайд">
-            </div>
-            <div class="product-body">
-                <h3 class="product-title">Суіпсайд</h3>
-                <div class="product-rating">★★★☆☆ <span class="rating-value">3.0/5</span></div>
-                <div class="product-price">$550</div>
-            </div>
-          </article>
-        <!--Футболка ІПСА не відміняється-->
-          <article class="product-card"  aria-label="ІПСА не відміняється (футболка)">
-            <div class="product-media">
-                <img src="images/t-shirt-notIASU.png" alt="Футболка ІПСА не відміняється">
-            </div>
-            <div class="product-body">
-                <h3 class="product-title">ІПСА не відміняється</h3>
-                <div class="product-rating">★★★★★ <span class="rating-value">5.0/5</span></div>
-                <div class="product-price">$550</div>
-            </div>
-          </article>
+            </article>
 
-        <!--Футболка I(N)ASA-->
-          <article class="product-card"  aria-label="I(N)ASA (футболка)">
-            <div class="product-media">
-                <img src="images/t-shirt-i(n)asa.png" alt="Футболка I(N)ASA">
-            </div>
-            <div class="product-body">
-                <h3 class="product-title">I(N)ASA</h3>
-                <div class="product-rating">★★★★☆ <span class="rating-value">4.0/5</span></div>
-                <div class="product-price">$550</div>
-            </div>
-          </article>
+            <article class="product-card"  aria-label="Суіпсайд (футболка)">
+              <div class="product-media">
+                  <img src="images/t-shirt-suipsaid.png" alt="Футболка Суіпсайд">
+              </div>
+              <div class="product-body">
+                  <h3 class="product-title">Суіпсайд</h3>
+                  <div class="product-rating">★★★☆☆ <span class="rating-value">3.0/5</span></div>
+                  <div class="product-price">$550</div>
+              </div>
+            </article>
+
+            <article class="product-card"  aria-label="ІПСА не відміняється (футболка)">
+              <div class="product-media">
+                  <img src="images/t-shirt-notIASU.png" alt="Футболка ІПСА не відміняється">
+              </div>
+              <div class="product-body">
+                  <h3 class="product-title">ІПСА не відміняється</h3>
+                  <div class="product-rating">★★★★★ <span class="rating-value">5.0/5</span></div>
+                  <div class="product-price">$550</div>
+              </div>
+            </article>
+
+            <article class="product-card"  aria-label="I(N)ASA (футболка)">
+              <div class="product-media">
+                  <img src="images/t-shirt-i(n)asa.png" alt="Футболка I(N)ASA">
+              </div>
+              <div class="product-body">
+                  <h3 class="product-title">I(N)ASA</h3>
+                  <div class="product-rating">★★★★☆ <span class="rating-value">4.0/5</span></div>
+                  <div class="product-price">$550</div>
+              </div>
+            </article>
 
           </div>
-
+        </div>
     </div>
   </main>
 
