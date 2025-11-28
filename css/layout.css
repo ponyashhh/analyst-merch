@@ -1,6 +1,6 @@
 /* === layout.css - Структура сторінки та адаптивність === */
 
-/* Універсальний контейнер */
+/* Універсальний контейнер*/ 
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -448,4 +448,460 @@
 @media (max-width: 700px) {
   .product-grid { grid-template-columns: 1fr; }
   .popular-products { padding-top: 60px; padding-bottom: 60px; }
+}
+/* === account-layout.css - Структура сторінки акаунту === */
+
+/* Основний контейнер для двох форм */
+.login-register-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+/* ======================================= */
+/* ===== АДАПТАЦІЯ (MEDIA QUERIES) ====== */
+/* ======================================= */
+
+/* --- ПЛАНШЕТИ (до 920px) --- */
+@media (max-width: 920px) {
+  .login-register-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* --- ТЕЛЕФОНИ (до 600px) --- */
+@media (max-width: 600px) {
+  .login-register-container {
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+}
+/* Сторінка кошика */
+
+.cart-page .cart-content {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.cart-page .cart-items {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* Сторінка товару */
+.product-page .about-page  {
+  padding: 40px 0 100px;
+}
+
+.product-page .product-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: start;
+  margin-top: 20px;
+}
+/* === product-page-layout.css - Структура сторінки товару === */
+
+/* Контейнер сторінки */
+.product-page {
+  padding: 0 0 80px;
+}
+
+.product-page > .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Сітка товару (фото + інфо) */
+.product-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  margin-top: 40px;
+}
+
+/* Секція галереї */
+.product-gallery {
+  position: static;
+}
+
+/* Секція інформації */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Форма з опціями */
+.product-info form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 25px 0;
+  padding: 25px 0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Fieldset опцій */
+.product-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Блок опису */
+.product-description {
+  margin-top: 10px;
+}
+
+.product-description h3 {
+  margin-bottom: 12px;
+}
+
+/* ======================================= */
+/* ===== АДАПТАЦІЯ (MEDIA QUERIES) ====== */
+/* ======================================= */
+
+/* --- ПЛАНШЕТИ (до 1300px) --- */
+@media (max-width: 1300px) {
+  .product-page > .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .product-details-grid {
+    gap: 60px;
+  }
+}
+
+/* --- ПЛАНШЕТИ (до 920px) --- */
+@media (max-width: 920px) {
+  .product-details-grid {
+    grid-template-columns: 1fr;
+    gap: 0; /* Видаляємо gap, щоб елементи йшли послідовно */
+  }
+
+  .product-gallery {
+    max-width: 500px;
+    margin: 0 auto 30px; /* Відступ знизу від фото */
+  }
+
+  .product-info {
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center; /* Центруємо весь контент */
+  }
+
+  /* Заголовок */
+  .product-info h1 {
+    order: 1;
+  }
+
+  /* Ціна */
+  .product-info > .product-price-large {
+    order: 2;
+  }
+
+  /* Рейтинг */
+  .product-info > .product-rating {
+    order: 3;
+  }
+
+  /* Форма */
+  .product-info form {
+    order: 4;
+    margin: 20px 0;
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: none; /* Прибираємо нижню рамку */
+  }
+
+  /* Опис */
+  .product-description {
+    order: 5;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0; /* Додаємо верхню рамку */
+  }
+}
+
+/* --- ТЕЛЕФОНИ (до 700px) --- */
+@media (max-width: 700px) {
+  .product-page {
+    padding-bottom: 60px;
+  }
+
+  .product-page > .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .product-details-grid {
+    margin-top: 30px;
+  }
+
+  .product-gallery {
+    max-width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .product-info {
+    gap: 18px;
+    max-width: 100%;
+  }
+
+  .product-info form {
+    gap: 18px;
+    margin: 18px 0;
+    padding: 18px 0;
+  }
+
+  .product-description {
+    margin-top: 18px;
+    padding-top: 18px;
+  }
+}
+
+/* --- МАЛІ ТЕЛЕФОНИ (до 500px) --- */
+@media (max-width: 500px) {
+  .product-gallery {
+    margin-bottom: 20px;
+  }
+
+  .product-info {
+    gap: 16px;
+  }
+
+  .product-info form {
+    gap: 16px;
+    margin: 16px 0;
+    padding: 16px 0;
+  }
+
+  .product-description {
+    margin-top: 16px;
+    padding-top: 16px;
+  }
+}
+
+/* === cart-layout.css - Структура сторінки кошика === */
+
+/* Основний контейнер */
+.cart-page {
+  padding: 60px 0 100px;
+}
+
+.cart-page .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Grid для товарів та підсумку */
+.cart-page > div > div {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* Секція з товарами */
+.cart-page section {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* ======================================= */
+/* ===== АДАПТАЦІЯ (MEDIA QUERIES) ====== */
+/* ======================================= */
+
+/* --- ПЛАНШЕТИ (до 1300px) --- */
+@media (max-width: 1300px) {
+  .cart-page .container {
+    padding: 0 50px;
+  }
+
+  .cart-page > div > div {
+    gap: 40px;
+  }
+}
+
+/* --- ПЛАНШЕТИ (до 920px) --- */
+@media (max-width: 920px) {
+  .cart-page {
+    padding: 50px 0 80px;
+  }
+
+  .cart-page > div > div {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .cart-page section {
+    padding: 30px;
+  }
+}
+
+/* --- ТЕЛЕФОНИ (до 800px) --- */
+@media (max-width: 800px) {
+  .cart-page .container {
+    padding: 0 16px;
+  }
+}
+
+/* --- ТЕЛЕФОНИ (до 600px) --- */
+@media (max-width: 600px) {
+  .cart-page {
+    padding: 40px 0 60px;
+  }
+
+  .cart-page section {
+    padding: 22px 18px;
+  }
+
+  .cart-page > div > div {
+    gap: 30px;
+  }
+}
+
+/* === profile-layout.css - Структура сторінки профілю === */
+
+/* Контейнер сторінки */
+.profile-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px -60px;
+}
+
+/* Основна форма */
+.profile-page > form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Fieldset структура */
+.profile-page fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Групи полів (ім'я/прізвище, дата/стать) */
+.profile-page .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Групи окремих полів */
+.profile-page fieldset > div:not(.form-row) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-page .form-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Поле телефону з префіксом */
+.phone-input {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 10px;
+}
+
+/* Кнопка відправки */
+.profile-page > form > button {
+  margin-top: 10px;
+}
+
+/* Секція CTA */
+.profile-page .cta-order {
+  margin-top: 80px;
+  margin-bottom: -60px;
+}
+
+/* ======================================= */
+/* ===== АДАПТАЦІЯ (MEDIA QUERIES) ====== */
+/* ======================================= */
+
+/* --- ПЛАНШЕТИ (до 1300px) --- */
+@media (max-width: 1300px) {
+  .profile-page {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+/* --- ПЛАНШЕТИ (до 920px) --- */
+@media (max-width: 920px) {
+  .profile-page h1 {
+    font-size: 38px;
+  }
+
+  .profile-page > form {
+    gap: 35px;
+  }
+}
+
+/* --- ТЕЛЕФОНИ (до 700px) --- */
+@media (max-width: 700px) {
+  .profile-page {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 60px;
+  }
+
+  .profile-page h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .profile-page .form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .profile-page fieldset {
+    gap: 18px;
+  }
+
+  .profile-page > form {
+    gap: 30px;
+  }
+
+  .profile-page .cta-order {
+    margin-top: 60px;
+  }
+}
+
+/* --- МАЛІ ТЕЛЕФОНИ (до 400px) --- */
+@media (max-width: 400px) {
+  .phone-input {
+    grid-template-columns: 70px 1fr;
+    gap: 8px;
+  }
 }
