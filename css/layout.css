@@ -403,6 +403,36 @@
 
   .submenu-toggle:checked ~ .dropdown { max-height: 500px; }
   .submenu-toggle:checked ~ .nav-link-wrapper .submenu-arrow::before { transform: rotate(-135deg); }
+
+  /* Інфо-картка вертикально */
+  .about-card {
+    flex-direction: column-reverse; /* Лого зверху, текст знизу */
+    text-align: center;
+    padding: 30px;
+    gap: 20px;
+  }
+  
+  .about-logo img {
+    max-width: 150px; /* Менше лого на телефоні */
+  }
+
+  /* Галерея: 2 колонки на планшеті */
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Банери вертикально */
+  .banner-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .banner-text {
+    font-size: 24px;
+    line-height: 1.2;
+  }
 }
 
 /* --- ТЕЛЕФОНИ (до 800px) --- */
@@ -448,4 +478,9 @@
 @media (max-width: 700px) {
   .product-grid { grid-template-columns: 1fr; }
   .popular-products { padding-top: 60px; padding-bottom: 60px; }
+
+  /* Галерея: 1 колонка на телефоні */
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -4,23 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Analyst Merch — Про нас</title>
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo">ANALYST</a>
+      <input type="checkbox" id="burger-toggle" class="burger-toggle">
 
       <nav class="main-nav" aria-label="Головне меню">
         <ul class="nav-list">
           <li class="nav-item nav-with-dropdown">
-            <a href="#" class="nav-link">Каталог</a>
+            <input type="checkbox" id="submenu-toggle" class="submenu-toggle">
+            <div class="nav-link-wrapper">
+              <a href="#" class="nav-link">Каталог</a>
+              <label for="submenu-toggle" class="submenu-arrow"></label>
+            </div>
             <ul class="dropdown" aria-label="Підменю каталогу">
-              <li><a href="t-shirts.html">Футболки</a></li>
-              <li><a href="shoppers.html">Шопери</a></li>
-              <li><a href="notebooks.html">Блокноти</a></li>
-              <li><a href="pens.html">Ручки</a></li>
-              <li><a href="stickers.html">Стикери</a></li>
+              <li><a href="t-shirts.html" class="dropdown-link">Футболки</a></li>
+              <li><a href="shoppers.html" class="dropdown-link">Шопери</a></li>
+              <li><a href="notebooks.html" class="dropdown-link">Блокноти</a></li>
+              <li><a href="pens.html" class="dropdown-link">Ручки</a></li>
+              <li><a href="stickers.html" class="dropdown-link">Стикери</a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="discounts.html" class="nav-link">Знижки</a></li>
@@ -28,9 +34,11 @@
         </ul>
       </nav>
 
+      <label for="burger-toggle" class="menu-overlay"></label>
+
       <form class="search-form" action="/search" method="get" role="search" aria-label="Пошук по сайту">
         <label for="site-search" class="visually-hidden">Пошук</label>
-        <input id="site-search" name="q" type="search" placeholder="Сьогодні я шукаю...">
+        <input id="site-search" name="q" type="search" placeholder="Сьогодні я шукаю..." required>
       </form>
 
       <div class="header-actions" role="group" aria-label="Дії">
@@ -41,64 +49,76 @@
           <img src="images/profile.svg" alt="Профіль">
         </a>
       </div>
+
+      <label for="burger-toggle" class="burger-menu">
+        <span class="burger-line"></span><span class="burger-line"></span><span class="burger-line"></span>
+      </label>
+
     </div>
   </header>
 
   <!-- MAIN -->
-  <main>
-    <section aria-label="Про нас заголовок">
-      <nav aria-label="Хлібні крихти">
-        <a href="index.html">Головна</a> › <span>Про нас</span>
-      </nav>
-      <h1>ПРО НАС</h1>
-    </section>
+  <main class="site-main">
+    <div class="container">
+        <nav aria-label="Хлібні крихти" class="breadcrumbs">
+          <a href="index.html">Головна</a> › <span>Про нас</span>
+        </nav>
+        <h1 class="page-title">ПРО НАС</h1>
 
-    <section>
-        <div>
-          <p>
-            Коли нас питають: «Хто ми?», ми гордо відповідаємо:
-            «ІПСАшники», і не забуваємо додати, що ІПСА не відміняється.
-            Ми — Студрада ІПСА, організація, яка супроводжує студентів
-            протягом усього навчання, навіть, коли вони ще абітурієнти.
-          </p>
+      <!-- 1. ІНФО-КАРТКА (Білий блок з текстом і лого) -->
+      <section class="about-card">
+          <div class="about-text">
+            <p>
+              Коли нас питають: «Хто ми?», ми гордо відповідаємо:
+              «ІПСАшники», і не забуваємо додати, що ІПСА не відміняється.
+              Ми — Студрада ІПСА, організація, яка супроводжує студентів
+              протягом усього навчання, навіть, коли вони ще абітурієнти.
+            </p>
+          </div>
+        
+          <div class="about-logo">
+            <img src="images/sc-logo-black.png" alt="Student Council Logo">
+          </div>
+        </section>
+
+      <section class="gallery-section">
+        <h2 class="section-title" style="text-align: left;">БІЛЬШЕ ФОТО</h2>
+        <div class="photo-grid">
+          <div class="photo-item">
+            <img src="images/photo-1.png" alt="Фото 1">
+          </div>
+          <div class="photo-item">
+            <img src="images/photo-2.png" alt="Фото 2">
+          </div>
+          <div class="photo-item">
+            <img src="images/photo-3.png" alt="Фото 3">
+          </div>
+          <div class="photo-item">
+            <img src="images/photo-4.png" alt="Фото 4">
+          </div>
         </div>
-      
-        <div>
-          <img src="images/sc-logo-black.png" alt="Student Council Logo">
+        <div class="gallery-actions">
+          <a href="https://photos.app.goo.gl/x8VYVTeTaoNxXEic8" class="button secondary-btn" target="_blank">Подивитись усе</a>
+        </div>
+        
+      </section>
+
+      <section class="social-section">
+        <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">НАШІ СОЦМЕРЕЖІ</h2>
+        <div class="banner-box yellow-banner">
+          <h3 class="banner-text">УСІ НАШІ СОЦМЕРЕЖІ ЗА ОДНИМ ПОСИЛАННЯМ</h3>
+          <a href="https://linktr.ee/iasa_sc" target="_blank" class="button white-btn">linktree</a>
         </div>
       </section>
 
-    <section aria-labelledby="more-photos">
-      <h2 id="more-photos">БІЛЬШЕ ФОТО</h2>
-      <div class="photo-gallery">
-        <figure>
-          <img src="images/photo-1.png" alt="Фото 1">
-        </figure>
-        <figure>
-          <img src="images/photo-2.png" alt="Фото 2">
-        </figure>
-        <figure>
-          <img src="images/photo-3.png" alt="Фото 3">
-        </figure>
-        <figure>
-          <img src="images/photo-4.png" alt="Фото 4">
-        </figure>
-      </div>
-      <a href="https://photos.app.goo.gl/x8VYVTeTaoNxXEic8" class="see-all" target="_blank" rel="noopener">Подивитись усе</a>
-    </section>
-
-    <section aria-labelledby="socials">
-      <h2 id="socials">НАШІ СОЦМЕРЕЖІ</h2>
-      <div class="social-banner">
-        <p>УСІ НАШІ СОЦМЕРЕЖІ ЗА ОДНИМ ПОСИЛАННЯМ</p>
-        <a href="https://linktr.ee/iasa_sc" target="_blank">linktree</a>
-      </div>
-    </section>
-
-    <section aria-label="CTA бот">
-      <h3>ДЛЯ ЗАМОВЛЕННЯ ПИШІТЬ У БОТ</h3>
-      <a href="https://t.me/iasamerch_bot" target="_blank">@iasamerch_bot</a>
-    </section>
+      <section class="bot-section bot-overlap">
+        <div class="banner-box black-banner">
+          <h3 class="banner-text text-white">ДЛЯ ЗАМОВЛЕННЯ ПИШІТЬ У БОТ</h3>
+          <a href="https://t.me/iasamerch_bot" target="_blank" class="button yellow-btn">@iasamerch_bot</a>
+        </div>
+        
+      </section>
+    </div>
   </main>
 
   <!-- FOOTER -->
@@ -108,8 +128,8 @@
         <a href="index.html" class="logo">ANALYST</a>
         <p class="footer-tagline">Синці під очима — не єдина візитівка ІПСАшників</p>
         <div class="social-links">
-          <a href="https://t.me/analyst_shop" target="_blank" rel="noopener" aria-label="Telegram"><img src="images/telegram.svg" alt="Telegram"></a>
-          <a href="https://www.instagram.com/analyst.shop" target="_blank" rel="noopener" aria-label="Instagram"><img src="images/instagram.svg" alt="Instagram"></a>
+          <a href="https://t.me/analyst_shop" target="_blank"><img src="images/telegram.svg" alt="Telegram"></a>
+          <a href="https://www.instagram.com/analyst.shop" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a>
         </div>
       </div>
 
@@ -118,7 +138,6 @@
           <h4>КОНТАКТИ</h4>
           <ul>
             <li><a href="about.html">Про нас</a></li>
-            <li><a href="#">Наш сайт</a></li>
           </ul>
         </div>
 

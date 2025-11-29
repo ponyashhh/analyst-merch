@@ -345,3 +345,156 @@
     text-align: center;
   }
 }
+
+/* --- ДОДАТОК: СТИЛІ СТОРІНКИ "ПРО НАС" --- */
+
+/* 1. Інфо-картка (біла з рамкою) */
+.about-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  border: 1px solid #e0e0e0; /* Тонка сіра рамка */
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 60px;
+  background-color: var(--color-light);
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.about-logo img {
+  max-width: 250px;
+  height: auto;
+}
+
+/* 2. Галерея */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 300px; /* Фіксована висота */
+  object-fit: cover; /* Щоб фото не сплющувалось */
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.photo-item:hover img {
+  transform: scale(1.03);
+}
+
+.gallery-actions {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* Кнопка "Подивитись усе" (прозора з рамкою) */
+.secondary-btn {
+  display: inline-block;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  color: var(--color-dark);
+  padding: 12px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background-color: var(--color-dark); /* Стає чорною */
+  color: var(--color-light); /* Текст стає білим */
+  border-color: var(--color-dark);
+  transform: translateY(-3px); /* Легкий підскок */
+}
+
+/* 3. Банери (Жовтий та Чорний) */
+.banner-box {
+  border-radius: 30px;
+  padding: 40px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.yellow-banner {
+  background-color: var(--color-primary-yellow);
+}
+
+.black-banner {
+  background-color: var(--color-dark);
+}
+
+.banner-text {
+  font-family: var(--font-primary);
+  font-size: 32px;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  margin: 0;
+}
+
+.text-white {
+  color: var(--color-light);
+}
+
+/* Кнопка на жовтому фоні (біла) */
+.white-btn {
+  display: inline-block; /* <-- ОБОВ'ЯЗКОВО: щоб кнопка могла рухатись */
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  
+  /* Плавна анімація всіх властивостей */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.white-btn:hover {
+  transform: translateY(-5px); /* "Підстрибує" вгору на 5 пікселів */
+  background-color: #f9f9f9;   /* Трохи змінює відтінок */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Додає тінь знизу */
+}
+
+/* Кнопка на чорному фоні (жовта) */
+.yellow-btn {
+  display: inline-block; /* <-- ОБОВ'ЯЗКОВО */
+  background-color: var(--color-primary-yellow);
+  color: var(--color-dark);
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: bold;
+  
+  /* Плавна анімація */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.yellow-btn:hover {
+  transform: translateY(-5px) scale(1.02); /* Підстрибує і трохи збільшується */
+  background-color: #ffde59; /* Стає світлішою (блідішою) */
+  box-shadow: 0 10px 20px rgba(255, 210, 0, 0.2); /* Жовтувата тінь */
+}
+
+/* --- ЕФЕКТ НАЇЗДУ НА ФУТЕР ДЛЯ СТОРІНКИ "ПРО НАС" --- */
+.bot-overlap {
+  margin-bottom: -60px; /* Головний секрет: тягнемо футер вгору */
+  position: relative;
+  z-index: 5; /* Щоб банер був ПОВЕРХ футера */
+}
+
+/* Прибираємо стандартний відступ банера в цьому блоці, 
+   щоб він не заважав накладанню */
+.bot-overlap .banner-box {
+  margin-bottom: 0;
+}
