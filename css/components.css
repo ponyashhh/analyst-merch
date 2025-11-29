@@ -497,4 +497,882 @@
    щоб він не заважав накладанню */
 .bot-overlap .banner-box {
   margin-bottom: 0;
+/* === account-components.css - Компоненти форм акаунту === */
+}
+
+/* Заголовки секцій */
+.login-section h2,
+.register-section h2 {
+  font-family: var(--font-primary);
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: var(--color-dark);
+  letter-spacing: 0.5px;
+}
+
+/* Секції входу та реєстрації */
+.login-section,
+.register-section {
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Стилі форм */
+.login-section form,
+.register-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Групи полів */
+.login-section form > div,
+.register-section form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Лейбли */
+.login-section label,
+.register-section label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  letter-spacing: 0.3px;
+}
+
+/* Поля введення */
+.login-section input,
+.register-section input {
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 16px;
+  color: var(--color-dark);
+  transition: all 0.3s ease;
+}
+
+.login-section input::placeholder,
+.register-section input::placeholder {
+  color: #aaa;
+}
+
+/* Фокус на полях */
+.login-section input:focus,
+.register-section input:focus {
+  outline: none;
+  border-color: var(--color-primary-yellow);
+  box-shadow: 0 0 0 3px rgba(255, 210, 0, 0.15);
+}
+
+/* Валідація - невалідне поле */
+.login-section input:invalid:not(:placeholder-shown),
+.register-section input:invalid:not(:placeholder-shown) {
+  border-color: var(--color-accent-red);
+}
+
+/* Валідація - валідне поле */
+.login-section input:valid:not(:placeholder-shown),
+.register-section input:valid:not(:placeholder-shown) {
+  border-color: #4caf50;
+}
+
+/* Кнопки відправки форм */
+.login-section button,
+.register-section button {
+  margin-top: 10px;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border: none;
+  border-radius: 25px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.login-section button:hover,
+.register-section button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-section button:active,
+.register-section button:active {
+  transform: translateY(0);
+}
+
+/* Акцент на кнопці реєстрації */
+.register-section button {
+  background-color: var(--color-primary-yellow);
+  color: var(--color-dark);
+}
+
+.register-section button:hover {
+  background-color: #ffde59;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 210, 0, 0.3);
+}
+
+/* ======================================= */
+/* ===== АДАПТАЦІЯ (MEDIA QUERIES) ====== */
+/* ======================================= */
+
+/* --- ПЛАНШЕТИ (до 920px) --- */
+@media (max-width: 920px) {
+  .login-section,
+  .register-section {
+    padding: 35px;
+  }
+
+  .login-section h2,
+  .register-section h2 {
+    font-size: 24px;
+  }
+}
+
+/* --- ТЕЛЕФОНИ (до 600px) --- */
+@media (max-width: 600px) {
+  .login-section,
+  .register-section {
+    padding: 25px 20px;
+  }
+
+  .login-section h2,
+  .register-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .login-section input,
+  .register-section input {
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+
+  .login-section button,
+  .register-section button {
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+}
+
+/* === cart-components.css - Компоненти сторінки кошика === */
+
+/* Картка товару в кошику */
+.cart-page article {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.cart-page article img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  background-color: #f0f0f0;
+}
+
+/* Інформація про товар */
+.cart-page article > div:nth-child(2) {
+  flex: 1;
+}
+
+.cart-page article h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--color-dark);
+}
+
+.cart-page article p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.cart-page article strong {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+/* Контрол кількості */
+.cart-page article > div:nth-child(3) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 8px 12px;
+}
+
+.cart-page article > div:nth-child(3) button {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-dark);
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.cart-page article > div:nth-child(3) button:hover {
+  color: var(--color-primary-yellow);
+  transform: scale(1.1);
+}
+
+.cart-page article > div:nth-child(3) input {
+  width: 50px;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.cart-page article > div:nth-child(3) input:focus {
+  outline: none;
+}
+
+/* Кнопка видалення */
+.cart-page article > button:last-child {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.3s ease;
+}
+
+.cart-page article > button:last-child:hover {
+  transform: scale(1.15);
+}
+
+/* Розділювач */
+.cart-page section hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 0;
+}
+
+/* Бокова панель (сума замовлення) */
+.cart-page aside {
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 20px;
+}
+
+.cart-page aside h2 {
+  font-family: var(--font-primary);
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: var(--color-dark);
+  letter-spacing: 0.5px;
+}
+
+/* Рядки з цінами */
+.cart-page aside > p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #555;
+}
+
+.cart-page aside > p strong {
+  font-size: 20px;
+  color: var(--color-dark);
+}
+
+.cart-page aside hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+/* Форма промокоду */
+.cart-page aside form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+.cart-page aside form input {
+  width: 100%;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--color-dark);
+  transition: all 0.3s ease;
+}
+
+.cart-page aside form input::placeholder {
+  color: #aaa;
+}
+
+.cart-page aside form input:focus {
+  outline: none;
+  border-color: var(--color-primary-yellow);
+  box-shadow: 0 0 0 3px rgba(255, 210, 0, 0.15);
+}
+
+.cart-page aside form button {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.cart-page aside form button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+/* Кнопка оплати */
+.cart-page aside > a {
+  display: block;
+  background-color: var(--color-primary-yellow);
+  color: var(--color-dark);
+  text-align: center;
+  border-radius: 20px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.cart-page aside > a:hover {
+  background-color: #ffde59;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 210, 0, 0.3);
+}
+
+/* ======================================= */
+/* ===== АДАПТАЦІЯ (MEDIA QUERIES) ====== */
+/* ======================================= */
+
+/* --- ПЛАНШЕТИ (до 920px) --- */
+@media (max-width: 920px) {
+  .cart-page h1 {
+    font-size: 38px;
+  }
+
+  .cart-page aside {
+    position: static;
+  }
+}
+
+/* --- ТЕЛЕФОНИ (до 700px) --- */
+@media (max-width: 700px) {
+  .cart-page h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .cart-page article {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 0;
+  }
+
+  .cart-page article img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cart-page article > div:nth-child(2) {
+    flex: 1;
+    min-width: 150px;
+  }
+
+  .cart-page article h3 {
+    font-size: 16px;
+  }
+
+  .cart-page article strong {
+    font-size: 18px;
+  }
+
+  .cart-page article > div:nth-child(3) {
+    order: 4;
+    margin-left: auto;
+  }
+
+  .cart-page article > button:last-child {
+    order: 3;
+  }
+
+  .cart-page aside {
+    padding: 25px 20px;
+  }
+
+  .cart-page aside h2 {
+    font-size: 22px;
+  }
+
+  .cart-page aside form {
+    flex-direction: column;
+  }
+
+  .cart-page aside form button {
+    width: 100%;
+  }
+}
+
+/* --- МАЛІ ТЕЛЕФОНИ (до 500px) --- */
+@media (max-width: 500px) {
+  .cart-page article {
+    gap: 10px;
+  }
+
+  .cart-page article img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cart-page article > div:nth-child(2) {
+    width: 100%;
+    order: 2;
+  }
+
+  .cart-page article > div:nth-child(3) {
+    order: 3;
+  }
+
+  .cart-page article > button:last-child {
+    order: 4;
+    margin-left: auto;
+  }
+}
+
+/* === product-page-components.css - Компоненти сторінки товару === */
+
+/* Галерея - головне зображення */
+.product-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.product-gallery img:hover {
+  transform: scale(1.02);
+}
+
+/* Заголовок товару */
+.product-info h1 {
+  font-family: var(--font-primary);
+  font-size: 42px;
+  line-height: 1.2;
+  color: var(--color-dark);
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* Велика ціна */
+.product-price-large {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin: 5px 0;
+}
+
+/* Рейтинг */
+.product-info .product-rating {
+  color: var(--color-primary-yellow);
+  font-size: 16px;
+}
+
+.product-info .rating-value {
+  color: #777;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+/* Legend для fieldset */
+.product-options legend {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-dark);
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+}
+
+/* Select розміру */
+.product-options select {
+  width: 100%;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 16px;
+  color: var(--color-dark);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+  font-family: inherit;
+}
+
+.product-options select:focus {
+  outline: none;
+  border-color: var(--color-primary-yellow);
+  box-shadow: 0 0 0 3px rgba(255, 210, 0, 0.15);
+}
+
+.product-options select option[disabled] {
+  color: #aaa;
+}
+
+/* Input кількості */
+.product-options input[type="number"] {
+  width: 130px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 16px;
+  color: var(--color-dark);
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.product-options input[type="number"]:focus {
+  outline: none;
+  border-color: var(--color-primary-yellow);
+  box-shadow: 0 0 0 3px rgba(255, 210, 0, 0.15);
+}
+
+/* Кнопка "Додати в кошик" */
+.product-info button[type="submit"] {
+  background-color: var(--color-primary-yellow);
+  color: var(--color-dark);
+  border: none;
+  border-radius: 25px;
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.product-info button[type="submit"]:hover {
+  background-color: #ffde59;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 210, 0, 0.3);
+}
+
+.product-info button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Опис товару */
+.product-description h3 {
+  font-family: var(--font-primary);
+  font-size: 22px;
+  color: var(--color-dark);
+  letter-spacing: 0.5px;
+}
+
+.product-description p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+}
+
+/* ======================================= */
+/* ===== АДАПТАЦІЯ (MEDIA QUERIES) ====== */
+/* ======================================= */
+
+/* --- ПЛАНШЕТИ (до 920px) --- */
+@media (max-width: 920px) {
+  .product-info h1 {
+    font-size: 36px;
+  }
+
+  .product-price-large {
+    font-size: 34px;
+  }
+
+  .product-info button[type="submit"] {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* --- ТЕЛЕФОНИ (до 700px) --- */
+@media (max-width: 700px) {
+  .product-info h1 {
+    font-size: 30px;
+  }
+
+  .product-price-large {
+    font-size: 30px;
+  }
+
+  .product-info .product-rating {
+    font-size: 15px;
+  }
+
+  .product-options legend {
+    font-size: 15px;
+  }
+
+  .product-options select,
+  .product-options input[type="number"] {
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+
+  .product-options input[type="number"] {
+    width: 110px;
+  }
+
+  .product-info button[type="submit"] {
+    padding: 14px 32px;
+    font-size: 16px;
+  }
+
+  .product-description h3 {
+    font-size: 20px;
+  }
+
+  .product-description p {
+    font-size: 15px;
+  }
+}
+
+/* --- МАЛІ ТЕЛЕФОНИ (до 500px) --- */
+@media (max-width: 500px) {
+  .product-info h1 {
+    font-size: 26px;
+  }
+
+  .product-price-large {
+    font-size: 28px;
+  }
+
+  .product-options input[type="number"] {
+    width: 100%;
+  }
+
+  .product-description h3 {
+    font-size: 18px;
+  }
+}
+
+/* --- ДУЖЕ МАЛІ ТЕЛЕФОНИ (до 400px) --- */
+@media (max-width: 400px) {
+  .product-info h1 {
+    font-size: 24px;
+  }
+
+  .product-price-large {
+    font-size: 26px;
+  }
+}
+
+/* === profile-components.css - Компоненти сторінки профілю === */
+
+/* Заголовки fieldset */
+.profile-page fieldset h2 {
+  font-family: var(--font-primary);
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: var(--color-dark);
+  letter-spacing: 0.5px;
+}
+
+/* Лейбли */
+.profile-page label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  letter-spacing: 0.3px;
+}
+
+/* Всі поля введення (input, select) */
+.profile-page input[type="text"],
+.profile-page input[type="email"],
+.profile-page input[type="tel"],
+.profile-page input[type="date"],
+.profile-page input[type="password"],
+.profile-page select {
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 16px;
+  color: var(--color-dark);
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+/* Placeholder */
+.profile-page input::placeholder,
+.profile-page select option[disabled] {
+  color: #aaa;
+}
+
+/* Фокус на полях */
+.profile-page input:focus,
+.profile-page select:focus {
+  outline: none;
+  border-color: var(--color-primary-yellow);
+  box-shadow: 0 0 0 3px rgba(255, 210, 0, 0.15);
+}
+
+/* Валідація - невалідне поле */
+.profile-page input:invalid:not(:placeholder-shown):not(:focus) {
+  border-color: var(--color-accent-red);
+}
+
+/* Валідація - валідне поле */
+.profile-page input:valid:not(:placeholder-shown):not([readonly]) {
+  border-color: #4caf50;
+}
+
+/* Readonly поля (email, префікс телефону) */
+.profile-page input[readonly] {
+  background-color: #f5f5f5;
+  color: #777;
+  cursor: not-allowed;
+  border-color: #e0e0e0;
+}
+
+/* Select стилізація */
+.profile-page select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+/* Поле телефону - префікс */
+.phone-input input[readonly] {
+  text-align: center;
+  font-weight: 600;
+  padding: 14px 10px;
+}
+
+/* Кнопка відправки */
+.profile-page > form > button {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border: none;
+  border-radius: 25px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  align-self: center;
+  min-width: 250px;
+}
+
+.profile-page > form > button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-page > form > button:active {
+  transform: translateY(0);
+}
+
+/* ======================================= */
+/* ===== АДАПТАЦІЯ (MEDIA QUERIES) ====== */
+/* ======================================= */
+
+/* --- ПЛАНШЕТИ (до 920px) --- */
+@media (max-width: 920px) {
+  .profile-page fieldset h2 {
+    font-size: 22px;
+  }
+
+  .profile-page input[type="text"],
+  .profile-page input[type="email"],
+  .profile-page input[type="tel"],
+  .profile-page input[type="date"],
+  .profile-page input[type="password"],
+  .profile-page select {
+    padding: 13px 16px;
+  }
+}
+
+/* --- ТЕЛЕФОНИ (до 700px) --- */
+@media (max-width: 700px) {
+  .profile-page fieldset h2 {
+    font-size: 20px;
+  }
+
+  .profile-page label {
+    font-size: 13px;
+  }
+
+  .profile-page input[type="text"],
+  .profile-page input[type="email"],
+  .profile-page input[type="tel"],
+  .profile-page input[type="date"],
+  .profile-page input[type="password"],
+  .profile-page select {
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+
+  .profile-page > form > button {
+    padding: 14px 28px;
+    font-size: 15px;
+    min-width: 200px;
+  }
+}
+
+/* --- МАЛІ ТЕЛЕФОНИ (до 400px) --- */
+@media (max-width: 400px) {
+  .profile-page > form > button {
+    min-width: 100%;
+  }
 }
