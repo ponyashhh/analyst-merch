@@ -42,3 +42,16 @@ img {
   max-width: 100%; /* Зображення не будуть виходити за межі свого контейнера */
   display: block;
 }
+
+/* --- ВИПРАВЛЕННЯ: STICKY FOOTER --- */
+/* Робимо body флекс-контейнером на всю висоту екрану */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Мінімальна висота = 100% висоти екрану */
+}
+
+/* Змушуємо main розтягуватись і займати все вільне місце */
+main, .site-main, .cart-page, .product-page {
+  flex: 1;
+}
