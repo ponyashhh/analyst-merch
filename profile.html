@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Analyst Merch — Профіль</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -48,6 +47,9 @@
       </form>
 
       <div class="header-actions" role="group" aria-label="Дії">
+
+        <button id="theme-toggle" class="theme-btn" aria-label="Змінити тему">🌙</button>
+
         <a class="action-link" href="cart.html" aria-label="Кошик">
           <img src="images/shopping-cart.svg" alt="Кошик">
         </a>
@@ -71,7 +73,7 @@
       </nav>
       <h1 class="page-title">ДАНІ КОРИСТУВАЧА</h1>
 
-    <form action="#" method="post">
+    <form action="#" method="post" novalidate>
         
         <fieldset>
             <div>
@@ -138,7 +140,7 @@
         
         <button type="submit">Зберегти зміни</button>
     </form>
-
+    </div> 
     <!-- CTA SECTION -->
     <section class="cta-order" aria-label="Замовлення">
         <div class="container">
@@ -184,6 +186,6 @@
         <p class="copyright">&copy; 2025 Бєляєва Софія, Плюсніна Валерія, КА-33</p>
       </div>
     </footer>
-  
+    <script src="js/main.js"></script>
   </body>
   </html>

@@ -378,9 +378,12 @@
   margin-top: 10px;
 }
 
-.profile-page .cta-order {
-  margin-top: 80px;
-  margin-bottom: -60px;
+/* Плюсик означає: "Візьми cta-order, який йде ОДРАЗУ ПІСЛЯ profile-page" */
+.profile-page + .cta-order {
+  margin-top: 80px;     /* Відступ зверху від форми */
+  margin-bottom: -60px; /* ЦЕ ГОЛОВНЕ: Тягне футер під себе */
+  position: relative;
+  z-index: 5;
 }
 
 

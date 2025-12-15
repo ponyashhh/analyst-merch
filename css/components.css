@@ -965,3 +965,275 @@
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* ========================================= */
+/* === ДОДАТОК: ЛАБОРАТОРНА РОБОТА 4 (JS) === */
+/* ========================================= */
+
+/* --- 1. Кнопка зміни теми (Місяць/Сонце) --- */
+.theme-btn {
+  background: transparent;
+  border: 1px solid currentColor; /* Колір рамки береться від кольору тексту */
+  color: inherit;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  margin-right: 15px; /* Відступ від кошика */
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: transform 0.3s ease;
+}
+
+.theme-btn:hover {
+  transform: scale(1.1);
+  color: var(--color-primary-yellow);
+}
+
+/* --- 2. Стилі Валідації (Помилки у формах) --- */
+/* Клас .input-error додає JS, коли є помилка */
+.input-error {
+  border-color: var(--color-accent-red) !important;
+  background-color: rgba(255, 51, 51, 0.05) !important;
+}
+
+/* Текст помилки */
+.error-message {
+  color: var(--color-accent-red);
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: bold;
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Анімація появи помилки */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- 3. ТЕМНА ТЕМА (Dark Mode) --- */
+/* Основний фон та текст */
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Темні картки товарів та блоків */
+body.dark-theme .product-card,
+body.dark-theme .format-card,
+body.dark-theme .login-section,
+body.dark-theme .register-section,
+body.dark-theme .cart-page section,
+body.dark-theme .cart-page aside,
+body.dark-theme .about-card,
+body.dark-theme .banner-box.white-btn /* Якщо є білі кнопки */ {
+  background-color: #1e1e1e; /* Темно-сірий замість білого */
+  color: #fff;
+  border-color: #333;
+  box-shadow: none;
+}
+
+/* Інверсія заголовків, щоб вони були білими */
+body.dark-theme .product-title,
+body.dark-theme .section-title,
+body.dark-theme .page-title,
+body.dark-theme h1, body.dark-theme h2, body.dark-theme h3,
+body.dark-theme strong,
+body.dark-theme .breadcrumbs span {
+  color: #fff;
+}
+
+/* Поля вводу в темній темі */
+body.dark-theme input,
+body.dark-theme select,
+body.dark-theme textarea {
+  background-color: #2d2d2d;
+  border-color: #444;
+  color: #fff;
+}
+
+body.dark-theme input::placeholder,
+body.dark-theme textarea::placeholder {
+  color: #888;
+}
+
+/* Хедер і футер в темній темі */
+body.dark-theme .site-header {
+  background-color: #000; /* Чорний хедер */
+}
+
+body.dark-theme .site-footer {
+  background-color: #1a1a1a; /* Темний футер */
+  color: #888;
+  border-top: 1px solid #333;
+}
+
+body.dark-theme .footer-bottom {
+  border-top-color: #333;
+}
+
+/* Підсвітка меню в темній темі */
+body.dark-theme .main-nav .nav-link:hover {
+  color: var(--color-primary-yellow);
+}
+
+/* --- Кнопка "Читати далі" (Inline) --- */
+.read-more-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--color-dark); /* Чорний колір, як у тексту */
+    font-weight: bold;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-left: 5px; /* Невеликий відступ від тексту */
+}
+
+.read-more-link:hover {
+    color: var(--color-primary-yellow); /* Жовтий при наведенні */
+    text-decoration: none;
+}
+
+/* Для темної теми */
+body.dark-theme .read-more-link {
+    color: #fff;
+}
+body.dark-theme .read-more-link:hover {
+    color: var(--color-primary-yellow);
+}
+
+/* --- Виправлення розміру картинки на головній --- */
+.hero-image img {
+    width: 100%;    /* Розтягнути на всю ширину контейнера */
+    height: auto;   /* Зберегти правильні пропорції */
+    display: block; /* Прибрати зайві відступи знизу */
+}
+
+/* --- ВИПРАВЛЕННЯ ТОВАРІВ У ТЕМНІЙ ТЕМІ --- */
+
+/* 1. Прибираємо сірий квадратний фон і рамку */
+body.dark-theme .product-media {
+  background-color: transparent; /* Прозорий фон */
+  border: none;                  /* Без рамки */
+  box-shadow: none;              /* Без тіні блоку */
+}
+
+/* 2. Додаємо легке світіння самій картинці (щоб чорний товар було видно) */
+body.dark-theme .product-media img {
+  /* drop-shadow створює тінь точно по контуру картинки (футболки), а не квадратом */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.15)); 
+  transition: filter 0.3s ease;
+}
+
+/* При наведенні робимо світіння трохи сильнішим */
+body.dark-theme .product-card:hover .product-media img {
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+}
+
+/* --- Виправлення для блоку "Знайди свій формат" --- */
+/* Оскільки фон тут завжди світлий, текст має бути чорним навіть у нічному режимі */
+body.dark-theme .formats .section-title {
+    color: var(--color-dark); /* Чорний колір */
+}
+
+/* --- Виправлення читабельності футера в темній темі --- */
+
+/* 1. Логотип "ANALYST" стає білим */
+body.dark-theme .site-footer .logo {
+    color: #ffffff;
+}
+
+/* 2. Заголовки колонок ("КОНТАКТИ", "ДОПОМОГА") стають білими */
+body.dark-theme .site-footer h4 {
+    color: #ffffff;
+}
+
+/* 3. Посилання в футері робимо світло-сірими, щоб їх було видно */
+body.dark-theme .site-footer a {
+    color: #cccccc;
+}
+/* При наведенні вони будуть жовтими (як і раніше) */
+body.dark-theme .site-footer a:hover {
+    color: var(--color-primary-yellow);
+}
+
+/* 4. Магія для іконок: перетворюємо чорні картинки на білі */
+body.dark-theme .site-footer .social-links img {
+    filter: invert(1); /* Інвертує кольори: чорний -> білий */
+    opacity: 0.8;      /* Трохи приглушуємо, щоб не різало очі */
+}
+body.dark-theme .site-footer .social-links a:hover img {
+    opacity: 1;        /* При наведенні робимо яскравим */
+}
+
+/* --- Виправлення хлібних крихт у темній темі --- */
+
+/* 1. Робимо звичайні посилання світлішими (щоб не були надто темними на чорному) */
+body.dark-theme .breadcrumbs a {
+    color: #bbb; 
+}
+
+/* 2. При наведенні робимо їх білими (замість чорних) */
+body.dark-theme .breadcrumbs a:hover {
+    color: #ffffff; 
+    /* Або можна var(--color-primary-yellow), якщо хочеш жовтим */
+}
+
+/* --- Виправлення логотипу Студради на сторінці "Про нас" --- */
+body.dark-theme .about-logo img {
+    filter: invert(1);
+}
+
+/* --- Виправлення кнопки "Подивитись усе" (Secondary Button) --- */
+body.dark-theme .secondary-btn {
+    color: #ffffff;       /* Білий текст */
+    border-color: #ffffff; /* Біла рамка */
+}
+
+/* При наведенні в темній темі робимо її жовтою */
+body.dark-theme .secondary-btn:hover {
+    background-color: var(--color-primary-yellow);
+    border-color: var(--color-primary-yellow);
+    color: var(--color-dark); /* Текст стає чорним на жовтому фоні */
+}
+
+/* --- Виправлення тексту на жовтому банері --- */
+/* На жовтому фоні текст завжди має бути чорним, навіть у нічному режимі */
+body.dark-theme .yellow-banner .banner-text {
+    color: #000000;
+}
+
+/* --- Виправлення текстового блоку в Кошику (Сума замовлення) --- */
+
+/* 1. Робимо звичайний текст (наприклад, "Доставка", "Знижка") світло-сірим */
+body.dark-theme .cart-page aside p {
+    color: #cccccc;
+}
+
+/* 2. Робимо жирний текст (Слово "Усього" та фінальну суму) яскраво-білим */
+body.dark-theme .cart-page aside p strong {
+    color: #ffffff;
+}
+
+/* 3. Заголовок "Сума замовлення" теж робимо білим */
+body.dark-theme .cart-page aside h2 {
+    color: #ffffff;
+}
+
+/* --- Виправлення стрілочки вибору (Select) у темній темі --- */
+body.dark-theme select {
+    /* Ми замінюємо картинку стрілки на таку саму, але білого кольору (fill='%23ffffff') */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+}
+
+/* --- Виправлення тексту в полях з помилкою (Темна тема) --- */
+body.dark-theme .input-error {
+    color: #ffffff !important; /* Примусово білий текст */
+}

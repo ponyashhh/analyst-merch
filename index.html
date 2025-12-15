@@ -47,6 +47,9 @@
       </form>
 
       <div class="header-actions" role="group" aria-label="Дії">
+
+        <button id="theme-toggle" class="theme-btn" aria-label="Змінити тему">🌙</button>
+
         <a class="action-link" href="cart.html" aria-label="Кошик">
           <img src="images/shopping-cart.svg" alt="Кошик">
         </a>
@@ -67,22 +70,30 @@
   <main class="site-main">
 
     <!-- HERO / HERO BANNER -->
-    <section class="hero" aria-label="Головний банер">
-      <div class="hero-inner">
-        <div class="hero-text">
-          <h1 class="hero-title">БУДЬ<br><span>У РИТМІ ІПСА</span></h1>
-          <p class="hero-sub">Голова болить від навчання, а стіни 35 корпусу вже рідніше домівки? Саме час порадувати себе новим мерчем!</p>
-          <p class="hero-cta">
-            <a class="button primary" href="https://t.me/iasamerch_bot" target="_blank" rel="noopener">Купити зараз</a>
-          </p>
-          <p class="hero-stats"><strong>65</strong> Унікальних товарів</p>
-        </div>
+  <section class="hero" aria-label="Головний банер">
+    <div class="hero-inner"> 
+      <div class="hero-text">
+        <h1 class="hero-title">БУДЬ<br><span>У РИТМІ ІПСА</span></h1>
+        <p class="hero-sub">
+          Голова болить від навчання, а стіни 35 корпусу вже рідніше домівки? Саме час порадувати себе новим мерчем!
+          <span id="dots">...</span>
+          <span id="more-text" style="display: none;">
+             Ми знаємо, як важко поєднувати пари, лаби та сон. Тому наш одяг створений для максимального комфорту під час дедлайнів!
+          </span>
+          <button id="toggle-btn" class="read-more-link">Читати далі</button>
+        </p>
 
-        <div class="hero-image" aria-hidden="false">
-          <img src="images/Students.jpg" alt="Студенти в мерчі Analyst">
-        </div>
+        <p class="hero-cta">
+          <a class="button primary" href="https://t.me/iasamerch_bot" target="_blank" rel="noopener">Купити зараз</a>
+        </p>
+        
+        <p class="hero-stats"><strong>65</strong> Унікальних товарів</p>
       </div>
-    </section>
+
+      <div class="hero-image" aria-hidden="false">
+        <img src="images/Students.png" alt="Студенти в мерчі Analyst">
+      </div>
+    </div> </section>
 
     <!-- SECTION: BANNER / PARTNER STRIP  -->
     <section class="partner-strip">
@@ -224,6 +235,6 @@
       <p class="copyright">&copy; 2025 Бєляєва Софія, Плюсніна Валерія, КА-33</p>
     </div>
   </footer>
-
+  <script src="js/main.js"></script>
 </body>
 </html>
